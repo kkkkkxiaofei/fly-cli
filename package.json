@@ -1,0 +1,15 @@
+{
+  "name": "fly-cli",
+  "version": "1.0.0",
+  "description": "fly is the scaffold tool for developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "kkkkkxiaofei, pursue",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^7.2.0"
+  }
+}
