@@ -1,9 +1,11 @@
 const commander = require('commander');
+const { exists } = require('./utils/fs');
+
 const program = new commander.Command();
 
 program
-  .arguments('[type]', 'type of tech set: node | lambda')
-  .arguments('[project]', 'project name')
+  .arguments('[project]', 'project with tech set: node-web | lambda')
+  .arguments('[name]', 'project name')
   .option('-d, --deploy', 'deploy to the certain cloud(aws)')
   .option('-i, --init', 'initialize your project')
   .option('-f, --force', `this option will initilize your project and automatically depoy the scaffold to cloud, hence please make sure you need this indeed
@@ -12,6 +14,15 @@ program
 
 program.parse(process.argv);
 
-const options = program.opts();
+const { init } = program.opts();
 
-console.log(program.args, options);
+const [project, name] = program.args;
+
+if (init) {
+  const templatePath = `${__dirname}/templates/${project}`;
+  const templateExisted = exists(templatePath);
+  if (!templateExisted) {
+    throw new Error(`Invalid project type: ${project}, please selecte one of "node-web | lamdba"`)
+  }
+}
+
