@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "fly is the scaffold tool for developer",
   "main": "index.js",
+  "bin": {
+    "fly": "index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
