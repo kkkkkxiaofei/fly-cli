@@ -4,7 +4,7 @@
 
 ***Why do I need it:***
 
-- It forces me to extract the framework of project I was using instead of copying from existing project, and be struggled with the business logic which doesn't belong to my need.
+- It forces me to extract the framework of project I was using instead of copying from existing project and being struggled with the business logic which doesn't belong to my need.
 
 - It could be the place to maintain the template with the development of tech.
 
@@ -12,15 +12,10 @@
 
 ```
 npm i
+npm link
 ```
 
 # Usage
-
-`link to global bin`:
-
-```
-npm link
-```
 
 `help`:
 
