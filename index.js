@@ -2,6 +2,7 @@
 
 const commander = require('commander');
 const { exists } = require('./utils/fs');
+const { cp } = require('./utils/shell');
 
 const program = new commander.Command();
 
@@ -26,4 +27,7 @@ if (init) {
   if (!templateExisted) {
     throw new Error(`Invalid project type: ${project}, please selecte one of "node-web | lamdba"`)
   }
-}
+
+  const result = cp(`${templatePath}/`, `./${name}`);
+  console.log(result);
+} 
