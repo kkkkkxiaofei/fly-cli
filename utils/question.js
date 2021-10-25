@@ -6,10 +6,22 @@ const QUESTIONS_OF_INIT_PROJECT = [{
     type: 'rawlist',
     name: 'template',
     message: 'Select a template:',
-    choices: [{
+    choices: [
+      //TODO:
+      {
         key: 'node',
         name: 'nodejs web server based on express',
         value: 'node-web',
+      },
+      {
+        key: 'react',
+        name: 'react start-kit',
+        value: 'react',
+      },
+      {
+        key: 'npm',
+        name: 'npm repo for publishing',
+        value: 'npm',
       },
     ]
   },
