@@ -17,3 +17,8 @@
 npm install
 ```
 
+### TODO
+
+1. publish
+
+2. rollup, build for different target(ESM, CommentJS..)

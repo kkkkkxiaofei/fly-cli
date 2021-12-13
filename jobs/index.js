@@ -4,7 +4,7 @@ const { logger } = require('../utils/log');
 const generateLocalProject = async (projectName, projectDesc, templatePath) => {
   const projectPath = `${process.cwd()}/${projectName}`;
   createDir(projectPath);
-  copy(`${templatePath}/*`, projectPath);
+  copy([`${templatePath}/*`, `${templatePath}/.*`], projectPath);
   replace(
     {
       name: projectName,
@@ -15,9 +15,9 @@ const generateLocalProject = async (projectName, projectDesc, templatePath) => {
 };
 
 const init = async (name, description, templatePath) => {
-  logger.info('starting to initilize local project ...');
+  logger.info('starting to initialize local project ...');
   await generateLocalProject(name, description, templatePath);
-  logger.success(`Your project ${name} has been initilized locally.`);
+  logger.success(`Your project ${name} has been initialized locally.`);
 };
 
 module.exports = {
