@@ -1,6 +1,6 @@
 # What is fly cli
 
-`fly` is the scaffolding tool for all my daily setup around serveral tech set, like `node-web`, `webpack-starter`, `react-starter`, `typescript-starter`, etc.
+`fly` is the scaffolding tool for all my daily setup around several tech set, like `node-web`, `webpack-starter`, `react-starter`, `typescript-starter`, etc.
 
 ***Why do I need it:***
 
@@ -15,6 +15,8 @@ npm i
 npm link
 ```
 
+> Haven't been published yet
+
 # Usage
 
 `help`:
@@ -26,13 +28,8 @@ fly -h
 `init`:
 
 ```
-fly node-web -i
+fly init
 ```
-
-```
-fly lambda -i
-```
-
 # Currently supporting
 
 TBC
