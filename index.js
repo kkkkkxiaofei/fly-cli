@@ -1,8 +1,8 @@
+#!/usr/bin/env node
+
 const commander = require('commander');
-const { startConversation } = require('./utils/question');
-
 const program = new commander.Command();
-
+const { startConversation } = require('./utils/question');
 [
   {
     name: 'init',
