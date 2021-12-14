@@ -8,21 +8,16 @@ const QUESTIONS_OF_INIT_PROJECT = [
     name: 'template',
     message: 'Select a template:',
     choices: [
-      // TODO:
       {
         key: 'node',
-        name: 'nodejs web server based on express',
+        name: 'script or library based on Node.js',
+        value: 'node',
+      },
+      // TODO:
+      {
+        key: 'node-web',
+        name: 'simple http server based on Node.js',
         value: 'node-web',
-      },
-      {
-        key: 'react',
-        name: 'react start-kit',
-        value: 'react',
-      },
-      {
-        key: 'npm',
-        name: 'npm repo for publishing',
-        value: 'npm',
       },
     ],
   },
