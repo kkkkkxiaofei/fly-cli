@@ -2,9 +2,9 @@
   "name": "@dummmy/fly-cli",
   "version": "1.0.1",
   "description": "fly is the scaffold tool for developer",
-  "main": "index.js",
+  "main": "./bin/index.js",
   "bin": {
-    "fly": "index.js"
+    "fly": "/bin/index.js"
   },
   "scripts": {
     "lint": "eslint .",
