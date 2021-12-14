@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node ./lib/index.ts",
-    "build": "tsc",
+    "build:ts": "tsc",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build": "npm run build:ts & npm run build:types",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prettier:fix": "prettier . --write",
