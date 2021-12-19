@@ -7,16 +7,6 @@
 - It forces me to extract the framework of project I was using instead of copying from existing project and being struggled with the business logic which doesn't belong to my need.
 
 - It could be the place to maintain the template with the development of tech.
-
-# Installation
-
-```
-npm i
-npm link
-```
-
-> Haven't been published yet
-
 # Usage
 
 `help`:
