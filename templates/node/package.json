@@ -6,7 +6,7 @@
   "module": "es/index.js",
   "unpkg": "dist/index.js",
   "types": "types/index.d.ts",
-  "files": [
+  "files1": [
     "cjs",
     "dist",
     "es",
