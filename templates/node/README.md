@@ -1,24 +1,35 @@
-# __name__
+### __name__
 
-## Table of Contents
+### Getting Started
 
-- [Getting Started](#getting-started)
-
-## Getting Started
-
-### Prerequisites
-
-- [NVM](https://github.com/nvm-sh/nvm#installing-and-updating)
-- [Node v14.15.1](https://nodejs.org/en/blog/release/v14.15.1/)
-
-### Installation
+#### Installation
 
 ```bash
 npm install
 ```
 
-### TODO
+#### Build
 
-1. publish
+`for publishing lib`:
 
-2. rollup, build for different target(ESM, CommentJS..)
+```
+npm run build:lib
+```
+
+`for building app`:
+
+```
+npm run build:app
+```
+
+#### Test
+
+```
+npm run test
+```
+
+`or ` with coverage:
+
+```
+npm run test:coverage
+```
