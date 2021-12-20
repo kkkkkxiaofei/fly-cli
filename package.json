@@ -1,6 +1,6 @@
 {
   "name": "@dummmy/fly-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "fly is the scaffold tool for developer",
   "main": "./bin/index.js",
   "bin": {
