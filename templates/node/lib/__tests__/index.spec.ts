@@ -1,5 +1,8 @@
+import { pickFirst } from '../utils/index';
+
 describe('Index', () => {
-  it('should make jest work', () => {
-    expect(1).toEqual(1);
+  it('should pick first element', () => {
+    const list = ['hello', 'world'];
+    expect(pickFirst(list)).toEqual('hello');
   });
 });
