@@ -9,8 +9,8 @@ const program = new commander.Command();
 
 program
   .arguments('[service]', 'select one service from: node-web | lambda')
-  .option('-d, --deploy', 'deploy to the certain cloud(aws)')
   .option('-i, --init', 'initialize your project')
+  .option('-d, --deploy', 'deploy to the certain cloud')
   .option('-f, --force', `this option will initilize your project and automatically depoy the scaffold to cloud, hence please make sure you need this indeed
    `);
 
