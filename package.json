@@ -1,5 +1,5 @@
 {
-  "name": "fly-cli",
+  "name": "@dummmy/fly-cli",
   "version": "1.0.0",
   "description": "fly is the scaffold tool for developer",
   "main": "index.js",
@@ -11,7 +11,16 @@
     "lint:fix": "eslint . --fix",
     "prettier:fix": "prettier . --fix"
   },
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkkkkxiaofei/fly-cli.git"
+  },
+  "keywords": [
+    "scaffold",
+    "nodejs",
+    "npm publish"
+  ],
+  "homepage": "https://github.com/kkkkkxiaofei/fly-cli.git",
   "author": "kkkkkxiaofei, pursue",
   "license": "MIT",
   "dependencies": {
