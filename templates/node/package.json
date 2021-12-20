@@ -6,7 +6,7 @@
   "module": "es/index.js",
   "unpkg": "dist/index.js",
   "types": "types/index.d.ts",
-  "files1": [
+  "todo-fix-npm-pack-for-sub-folder": [
     "cjs",
     "dist",
     "es",
