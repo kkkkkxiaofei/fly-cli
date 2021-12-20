@@ -1,29 +1,64 @@
-const prompt = require('prompt');
-  
-const schema = {
-  properties: {
-    name: {
-      description: '[project name]:',
-      message: 'project name is required',
-      required: true,
-      before: value => value.replace('\t', '').trim()
+const inquirer = require('inquirer');
+const path = require('path');
+const { init } = require('../jobs');
+
+const QUESTIONS_OF_INIT_PROJECT = [{
+    type: 'rawlist',
+    name: 'template',
+    message: 'Select a template:',
+    choices: [{
+        key: 'node',
+        name: 'nodejs web server based on express',
+        value: 'node-web',
+      },
+    ]
+  },
+  {
+    type: 'input',
+    name: 'name',
+    message: "What's your project name?",
+    validate(value) {
+      const result = value.replace('\t', '').trim();
+      if (!!result) {
+        return true;
+      }
+      return 'Please enter a valid project name';
     },
-    description: {  
-      description: '[description]:',
-      message: 'description is required',
-      required: true,
-      before: value => value.replace('\t', '').trim()
+  },
+  {
+    type: 'input',
+    name: 'description',
+    message: "What's your project description?",
+    validate(value) {
+      const result = value.replace('\t', '').trim();
+      if (!!result) {
+        return true;
+      }
+      return 'Please enter a valid project description';
     },
   }
+];
+
+const questionMap = {
+  init: {
+    questions: QUESTIONS_OF_INIT_PROJECT,
+    cb: ({ name, description, template }) => {
+      const templatePath = path.resolve(__dirname, '..', `templates/${template}`);
+      init(name, description, templatePath);
+    }
+  },
 };
 
-const startQuestion = (cb) => {
-  prompt.start({ message: ' ', delimiter: ' ' });
-  prompt.get(schema, function (err, result) {
-    cb(result);
+const startConversation = type => {
+  const {
+    questions,
+    cb
+  } = questionMap[type];
+  return inquirer.prompt(questions).then((answers) => {
+    cb(answers);
   });
-};
+}
 
 module.exports = {
-  startQuestion
+  startConversation
 };
