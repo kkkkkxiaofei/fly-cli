@@ -1,6 +1,9 @@
 coverage/
 .env
 dist
+cjs
+es
+types
 .vscode/
 node_modules/
 .DS_Store
