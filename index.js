@@ -2,7 +2,7 @@
 
 const commander = require('commander');
 const { exists } = require('./utils/fs');
-const { cp } = require('./utils/shell');
+const { cp, replace } = require('./utils/shell');
 
 const program = new commander.Command();
 
@@ -28,6 +28,10 @@ if (init) {
     throw new Error(`Invalid project type: ${project}, please selecte one of "node-web | lamdba"`)
   }
 
-  const result = cp(`${templatePath}/`, `./${name}`);
-  console.log(result);
+  const cpResult = cp(`${templatePath}/`, `./${name}`);
+  console.log('=====finish cp====', cpResult);
+
+  const replaceResult = replace({ name, desc: `This is the description of ${name}` }, `${process.cwd()}/${name}`);
+
+  console.log('=====finish replace====', replaceResult);
 } 
