@@ -1,1 +1,3 @@
-console.log('hello node lib');
+import { pickFirst } from './utils';
+
+console.log(pickFirst(['hello', 'world']));
