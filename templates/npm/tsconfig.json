@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist/" /* Redirect output structure to the directory. */ /* Do not emit comments to output. */ ,
+    "outDir": "./dist/",
     "noEmit": false,
     "typeRoots": [
       "node_modules/@types"
