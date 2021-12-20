@@ -26,7 +26,11 @@ fly -h
 `init`:
 
 ```
-fly your-project -i
+fly node-web -i
+```
+
+```
+fly lambda -i
 ```
 
 # Currently supporting
