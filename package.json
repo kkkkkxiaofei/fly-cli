@@ -13,6 +13,7 @@
   "author": "kkkkkxiaofei, pursue",
   "license": "MIT",
   "dependencies": {
-    "commander": "^7.2.0"
+    "commander": "^7.2.0",
+    "prompt": "^1.1.0"
   }
 }
