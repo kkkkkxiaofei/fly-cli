@@ -2,7 +2,7 @@
 
 const commander = require('commander');
 const program = new commander.Command();
-const { startConversation } = require('./utils/question');
+const { startConversation } = require('../utils/question');
 [
   {
     name: 'init',
