@@ -1,15 +1,15 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "typeRoots": [
-      "node_modules/@types"
-      //could add more if you are developing app
-    ]
+    "declaration": true,
+    "outDir": "types",
+    "emitDeclarationOnly": true,
   },
   "include": [
     "lib/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "lib/**/__tests__"
   ]
 }

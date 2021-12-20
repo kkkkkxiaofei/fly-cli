@@ -6,6 +6,13 @@
   "module": "es/index.js",
   "unpkg": "dist/index.js",
   "types": "types/index.d.ts",
+  "files": [
+    "cjs",
+    "dist",
+    "es",
+    "types",
+    "package.json"
+  ],
   "scripts": {
     "dev": "ts-node ./lib/index.ts",
     "lint": "eslint .",
@@ -15,7 +22,7 @@
     "test:coverage": "jest --coverage --config jest.config.coverage.js",
     "webpack": "webpack",
     "rollup": "rollup -c",
-    "build:types": "tsc --declaration --outDir ./types --emitDeclarationOnly",
+    "build:types": "tsc --project ./tsconfig.types.json",
     "build:lib": "npm run rollup & npm run build:types",
     "build:app": "npm run webpack",
     "clean": "rm -rf types cjs es dist coverage"
@@ -28,7 +35,7 @@
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-typescript": "^8.3.0",
-    "@tsconfig/node14": "^1.0.0",
+    "@types/estree": "0.0.50",
     "@types/jest": "^26.0.24",
     "@types/node": "^14.14.41",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
