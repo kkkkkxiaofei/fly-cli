@@ -25,7 +25,8 @@
     "build:types": "tsc --project ./tsconfig.types.json",
     "build:lib": "npm run rollup & npm run build:types",
     "build:app": "npm run webpack",
-    "clean": "rm -rf types cjs es dist coverage"
+    "clean": "rm -rf types cjs es dist coverage package",
+    "publish": "./publish"
   },
   "keywords": [
     "__name__",
