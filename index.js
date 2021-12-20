@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const commander = require('commander');
 const { exists } = require('./utils/fs');
 
@@ -25,4 +27,3 @@ if (init) {
     throw new Error(`Invalid project type: ${project}, please selecte one of "node-web | lamdba"`)
   }
 }
-
